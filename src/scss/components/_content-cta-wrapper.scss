@@ -1,0 +1,10 @@
+.content-cta-wrapper{
+
+  .content-wrapper{
+    margin: 0 auto 5rem auto;
+
+    @include modifier('medium'){
+      width: 40%;
+    }
+  }
+};

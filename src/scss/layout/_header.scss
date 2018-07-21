@@ -1,0 +1,45 @@
+.header{
+        position: relative;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        height: 220px;
+        z-index: 9;
+
+        @include for-tablet-portrait-up{
+            height: 280px;
+        }
+
+        @include element('inner'){
+            position: absolute;
+            top: 0px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            padding-top: calc(112px + 36px);
+            overflow: hidden;
+
+            .header__title-block{
+                position: relative;
+
+                .header__title{
+                    position: relative;
+                    top: 35%;
+                    font-size: 33px;
+                    text-transform: capitalize;
+                    letter-spacing: 1px;
+                    text-align: center;
+                }
+
+                .title-line{
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: calc(100% - (40vw + 120px));
+                    height: 1px;
+                    background-color: rgba(255, 255, 255, 0.45);
+                }
+        }
+            
+    }
+}

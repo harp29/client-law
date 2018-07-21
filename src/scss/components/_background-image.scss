@@ -1,0 +1,32 @@
+.bcg-img{
+  height: 100%;
+  width: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  @include modifier('1'){
+    // @include bg-image('../images/about-land.jpg');
+    filter: saturate(4) contrast(.8) brightness(.7);
+
+    //background-attachment: fixed;
+
+  }
+
+  @include modifier('team'){
+    // @include bg-image('../images/team-bg.jpg');
+    filter: saturate(.5) contrast(.8) brightness(.7);
+
+    //background-attachment: fixed;
+
+  }
+
+  @include modifier('cervini'){
+    // @include bg-image('../images/cervini-web-min.png');
+  }
+
+  @include modifier('bhatia'){
+    // @include bg-image('../images/bhatia-web-min.png');
+  }
+}

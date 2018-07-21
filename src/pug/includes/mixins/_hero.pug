@@ -1,0 +1,28 @@
+mixin hero(introHeading, introDescription, pageName)
+    if(introHeading != '')
+        div(class="page-base")
+                div( class="js-page-base__image page-base__image page-base__image--"+pageName)
+                div( class="page-base__texture")
+                    div( class="texture")
+                div(class="page-base__grid")
+                    div(id="js-grid-inner" class="inner")
+                    div(id="js-grid-middle" class="middle")            
+        .land
+            div(class="container")
+                div(class="intro")
+                    h1(class="intro__heading js-intro__heading")=introHeading
+                    p(id="js-intro-description" class="intro__description type--color-green")=introDescription
+                        .cta-holder  
+                            span.cta learn more
+                                div                                
+    else
+        section.section--hero.hero  
+            div(class="page-base")
+                div( class="page-base__texture")
+                    div( class="texture")
+                div(class="page-base__grid")
+                    div(id="js-grid-inner" class="inner")
+                    div(id="js-grid-middle" class="middle") 
+            .container
+                .hero__block
+                    div(class="hero__fullscreen-image hero__fullscreen-image--"+pageName)

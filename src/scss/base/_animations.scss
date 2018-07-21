@@ -1,0 +1,72 @@
+//Animations:
+$timing: 3s;
+$easing: cubic-bezier(0.77, 0, 0.175, 1);
+
+.animate-from-left{
+  transform: translateX(-30px);
+  opacity: 0;
+}
+
+// .SCROLL-CTA STYLES
+@-webkit-keyframes scroll-line {
+  0%   { height: 0; opacity: 0;}
+  100% { height: 4.2rem; opacity: 1;}
+}
+@-moz-keyframes scroll-line {
+  0%   { height: 0; opacity: 0;}
+  100% { height: 4.2rem; opacity: 1;}
+}
+@-o-keyframes scroll-line {
+  0%   { height: 0; opacity: 0;}
+  100% { height: 4.2rem; opacity: 1;}
+}
+@keyframes scroll-line {
+  0%   { height: 0; opacity: 0;}
+  100% { height: 4.2rem; opacity: 1;}
+}
+
+// .company-intro__text{
+//   opacity: 0;
+// }
+////////////////////////////////////
+//
+//* LOADING STYLES *
+//
+///////////////////////////////////
+
+#js-loading-cta{
+  opacity: 0;
+  visibility: none;
+}
+
+////////////////////////////////////
+//
+//* SLIDER STYLES *
+//
+///////////////////////////////////
+
+.slider__slide,
+.stagger,
+.slider__arrows-navigation{
+  opacity: 0;
+}
+
+.animate-from-bottom{
+  transform: translateY(30px);
+}
+
+
+.overflow-hidden-box{
+  overflow: hidden;
+}
+
+//.slider__text-box_cta{
+//  &:hover body{
+//    background-color: blue;
+//  }
+//}
+//</div>
+//<div class="slider__img slider__img--2"></div>
+
+
+

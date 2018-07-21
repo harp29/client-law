@@ -1,0 +1,232 @@
+@import "../abstracts/mixins";
+
+/*
+  HERO SLIDER STYLES
+*/
+
+
+.slider{
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  top: 9.5vh;
+
+  .line{
+    background-color: $color-offset--white;
+    opacity: .05;
+    height: 100%;
+    width: 1px;
+    position: absolute;
+    z-index: 2;
+  }
+
+  // RESPONSIVE - PHONE
+  //@include respond(phone) {
+  //  padding: 3rem 5rem;
+  //}
+
+  @include element('slide'){
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+
+  @include element('text-box'){
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    z-index: 3;
+    transform: translateX(-50%);
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+
+    @include for-tablet-portrait-up{
+      width: 70%;
+    }
+
+    /* Landscape */
+    @media screen and (orientation:landscape) {
+      width: 95%;
+    }
+
+    @include for-tablet-landscape-up{
+      width: 45%;
+    }
+
+    @include for-desktop-up{
+      width: 30%;
+      bottom: 6%;
+    }
+
+    @include for-big-desktop-up{
+      width: 30%;
+    }
+
+    @include element('staff-name'){
+      @include text(1.4rem, .6rem, .3rem);
+      text-shadow: 0px 0px 2px black;
+      text-transform: uppercase;
+      // font-family: $font-family--playfair;
+      margin-bottom: 1rem;
+
+      //@include for-tablet-landscape-up{
+      //  font-size: 3rem;
+      //}
+    }
+
+    @include element('job-title'){
+      width: 100%;
+      margin: 0 auto;
+      @include text(1rem, 0.1rem, 0.01rem);
+      margin-bottom: 1rem;
+    }
+
+    @include element('description'){
+      @include text(1rem, 0.1rem, 0.01rem);
+      margin-bottom: .5rem;
+      margin: 0 auto;
+
+      //@include for-tablet-portrait-up {
+      //  width: 75%;
+      //}
+      //
+      @include for-desktop-up {
+        margin-bottom: 1.2rem;
+      }
+    }
+
+
+  }
+
+  @include element('img'){
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    height: 100%;
+    width: 100%;
+    -webkit-filter: saturate(0);
+
+    @include for-tablet-portrait-up{
+      top: -16%;
+      height: 120%;
+    }
+
+    /* Landscape */
+    @media screen and (orientation:landscape) {
+      display: none;
+    }
+
+    @include for-tablet-landscape-up{
+      display: block;
+    }
+
+    @include modifier('1'){
+      // @include bg-image('../images/cervini-web-min.png');
+      background-size: cover;
+
+      @include for-tablet-landscape-up{
+        background-size: contain !important;
+      }
+
+      /* Landscape */
+      @media screen and (orientation:landscape) {
+        background-size: contain !important;
+      }
+    }
+
+    @include modifier('2'){
+      // @include bg-image('../images/bhatia-web-min.png');
+      background-size: cover;
+
+      @include for-tablet-landscape-up{
+        background-size: contain !important;
+      }
+
+      @media screen and (orientation:landscape) {
+        background-size: contain !important;
+      }
+    }
+
+  }
+
+  @include element('arrows-navigation'){
+    background-color: $color-offset--dark-grey;
+    border-radius: 5rem;
+    display: flex;
+    position: absolute;
+    top: 2.5%;
+    transform: translateX(-50%);
+    left: 50%;
+
+    @media only screen and (max-width: 768px) and (min-width: 768px){
+      top: 4%;
+    }
+    /* Landscape */
+    @media screen and (orientation:landscape) {
+      top: 9.5%;
+    }
+
+    &:after{
+      content: '';
+      position: absolute;
+      height: 40%;
+      width: 1px;
+      background-color: $color-offset--dark-grey;
+      opacity: .3;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    @include for-tablet-landscape-up {
+      bottom: 2.5%;
+      transform: translateY(-50%);
+      right: 6%;
+      left: auto;
+      top: auto;
+    }
+
+    .arrow{
+      cursor: pointer;
+      padding: .8rem 2rem;
+
+      @media screen and (orientation:landscape) {
+        padding: .6rem 1.6rem;
+      }
+
+      @include modifier('left'){
+        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+      }
+
+      @include modifier('right'){
+
+      }
+    }
+
+  }
+}
+
+.slide-link-active{
+  color: $color-offset--white !important;
+}
+
+//.slide-active{
+//  opacity: 1;
+//
+//  visibility: visible;
+//}
+
+//@media only screen and (max-width: 37.5em) { @content };
+
+
+
+
+

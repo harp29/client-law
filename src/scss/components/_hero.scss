@@ -1,0 +1,13 @@
+.hero{
+    @include element('block'){
+        height: 59vw;
+        opacity: 0.25;
+
+        @include for-tablet-portrait-up{
+            height: 49vw;
+        }
+    }
+    @include element('fullscreen-image'){
+        @include bg-image('../images/landing.jpeg');
+    }
+}

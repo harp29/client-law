@@ -1,0 +1,44 @@
+.page{
+    @include element('header'){
+        position: relative;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        height: 220px;
+        z-index: 9;
+
+        .page__header-inner{
+            position: absolute;
+            top: 0px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            padding-top: calc(112px + 36px);
+            overflow: hidden;
+
+            .page__title-block{
+                position: relative;
+
+                .page__title{
+                    position: relative;
+                    top: 35%;
+                    font-size: 33px;
+                    text-transform: uppercase;
+                    letter-spacing: 10px;
+                    text-align: center;
+                }
+
+                .title-line{
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width:20%;
+                    height: 1px;
+                    background-color: rgba(255, 255, 255, 0.45);
+                }
+
+            }
+            
+        }
+    }
+}

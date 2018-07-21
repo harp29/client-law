@@ -1,0 +1,23 @@
+include ./_background-effect.pug
+mixin text-block(pageName, titles, description, cta, ctaCaption)
+    if(cta != true)
+        section(id=pageName, class=pageName)
+            .container  
+                    .text-block
+                            h1.text-block__title=title
+                            p.text-block__description=description
+        block                        
+    else
+        section(id=pageName class=pageName)
+            .container  
+                .text-block
+                    h1.text-block__title
+                        each title in titles
+                            span= title
+                            //- span=title.title
+                    p.text-block__description !{description}
+                    .text-block__cta
+                        span.cta=ctaCaption
+                            div
+            +background-effect(true, 'c')            
+        block                    

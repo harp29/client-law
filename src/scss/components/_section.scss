@@ -1,0 +1,163 @@
+// .section {
+//   padding: 10rem 0 0 0;
+//   @include for-tablet-landscape-up {
+//     padding: 12rem 0 0 0;
+//   }
+
+//   @include modifier('hero'){
+//     padding: 2rem 0 0 0;
+//   }
+
+//   @include element('caption'){
+//     margin: 0 auto;
+//     padding: 0px 0 150px 110px;
+
+//     .caption{
+//       font-size: 48px;
+//       letter-spacing: 105px;
+//       text-transform: uppercase;
+//       font-family: $type-font--cormorant-garamond;
+//       font-weight: 500;
+//     }
+//   }
+
+//   @include modifier('team') {
+//     text-align: center;
+//     .section__title {
+//       text-align: left;
+//       display: inline-block;
+//     }
+//   }
+
+//   //EXPERIENCE:
+//   @include modifier('experience') {
+//     .experience {
+//       margin-bottom: 3.125rem;
+//       &:last-of-type{
+//         margin-bottom: 0;
+//       }
+//       @include for-tablet-portrait-up{
+//         margin-bottom: 5.625rem; 
+//       }
+//       .line {
+//         width: 12%;
+//         height: 1px;
+//         background-color: yellowgreen;
+//         display: inline-block;
+//         position: relative;
+//         top: -9px;
+//         left: -3px;
+//       }
+//       @include element('title'){
+//         font-size: 1.875rem;
+//         font-family: $type-font--cormorant-garamond;
+//         margin-bottom: 1.875rem;
+//       }
+//       @include element('description'){
+//         // font-size: 1rem;
+//         color: $color-offset--light-grey;
+//       }
+//     }
+//   }
+
+//   //FIRM OVERVIEW:
+//   @include modifier('firm-overview'){
+//     .firm-overview{
+//       margin-bottom: 6.25rem;
+//       &:last-of-type{
+//         margin-bottom: 0;
+//       }
+//       // &:nth-of-type(2){
+//       //   margin-left: 42.5%;
+//       // }
+//       @include element('number'){
+//         font-size: 1.75rem;
+//         font-family: $type-font--cormorant-garamond;
+//         margin-bottom: 2.8125rem;
+//       }
+//       @include element('title'){
+//         // font-size: 1.25rem;
+//         color: $color-offset--green;
+//         letter-spacing: .3rem;
+//         text-transform: uppercase;
+//         margin-bottom: 3.125rem;
+
+//         @include for-tablet-landscape-up{
+//           margin-bottom: 6.25rem;
+//         }
+//       }
+//       @include element('description'){
+//         font-family: $type-font--cormorant-garamond;
+//         font-size: 1.25rem;
+//       }
+//     }
+//   }
+
+//   //COMMUNICATION:
+//   @include modifier('communication'){
+//     .communication{
+//       @include element('description'){
+//         font-family: $type-font--cormorant-garamond;
+//         font-size: 1.25rem;
+//         color: $color-offset--light-grey;
+//       }
+//     }
+//   }
+
+//   .block-holder {
+//     position: relative;
+//     display: inline-block;
+//   }
+//   @include element('top-line') {
+//     position: absolute;
+//     top: -.5rem;
+//     left: 0;
+//     background-color: $color-offset--green;
+//     width: 37%;
+//     height: 1px;
+//   }
+//   @include element('tagline') {
+//     font-size: 0.875rem;
+//     letter-spacing: 0.55rem;
+//     text-transform: uppercase;
+//     margin-bottom: .7rem;
+//     font-family: $type-font--cormorant-garamond;
+//   }
+//   @include element('title') {
+//     font-family: $type-font--cormorant-garamond;
+//     font-size: 2.175rem;
+//     margin-bottom: 4rem;
+//     line-height: 1;
+//     @media screen and (min-width: 1000px) {
+//       font-size: 2.5rem;
+//     }
+//     @include modifier('block') {
+//       line-height: 1.1;
+//       span:last-of-type {
+//         line-height: .8;
+//       }
+//     }
+//   }
+//   @include element('description') {
+//     // font-size: .9375rem;
+//     // text-align: left;
+//     margin-bottom: 5.625rem;
+
+//     // @include for-desktop-up{
+//     //   font-size: 1.1rem;
+//     // }
+//   }
+// }
+
+// .section-contain {
+//   position: relative;
+//   width: calc(16.667vw * 4 - 1px);
+//   margin: 0 auto; // border: 1px solid red;
+//   @media screen and (orientation: landscape) and (max-width: 815px) {
+//     width: calc(16.667vw * 3 - 1px);
+//   }
+//   @include for-tablet-landscape-up {
+//     width: calc(16.667vw * 2.5 - 1px);
+//   }
+// }
+

@@ -1,0 +1,72 @@
+doctype html
+include ./includes/mixins/_header.pug
+include ./includes/mixins/_hero.pug
+include ./includes/mixins/_text-block.pug
+include ./includes/mixins/_grid-content.pug
+-
+  var myGridItems = [
+    {
+      title: 'Efficiency',
+      content: {
+        description: 'Our extensive resources allow us to dedicate more time to your file. Efficiency matters.'
+      }
+    },
+    {
+      title: 'Human Experience',
+      content: {
+        description: 'To us, you are not just a file number. We offer the personal service that many can’t.'
+      }
+    },
+    {
+      title: 'Results',
+      content: {
+        description: 'We have been awarded Millions of dollars in compensation for our clients.'
+      }
+    }
+  ]
+-
+  var firmOverviewGrid = [
+    {
+      title: 'I.',
+      content: {
+        title: 'Compassion',
+        description: 'At Cervini Bhatia Professional Corporation we pride ourselves on delivering compassionate and empathetic customer service. We build a unique relationship with each and every client by understanding and recognizing that our clients come to us after suffering life-altering traumatic injuries. We are more than a reputable firm; we are a place of solace in a time of tragedy. Our compassionate employees strive to alleviate our clients’ legal and financial stresses so that our clients can focus on getting their health and lives back on track. We are pleased to offer free initial consultations and our clients pay no legal fees until we win their case.'
+      }
+    },
+    {
+      title: 'II.',
+      content: {
+        title: 'Integrity',
+        description: 'At Cervini Bhatia Professional Corporation we secure our clients’ confidence by providing professional and reliable legal advice. We take great pride in our work and strive to maintain legal integrity by showing our clients the respect and concern they deserve. Cervini Bhatia Professional Corporation is dedicated to keeping our clients informed every step of the way and to seeking our client’s input and instructions before making any decisions. We utilize innovative and thoughtful strategies in order to deliver maximum results for our clients.'
+      }
+    },
+    {
+      title: 'IV.',
+      content: {
+        title: 'Results',
+        description: 'Daniela Cervini and Shiwali Bhatia, our firm’s founders, have more than 20 years of combined experience exclusively in the area of personal injury law. Both Daniela and Shiwali are passionate about providing their clients with compassion, integrity and results. To further enhance our legal team we work with our trial counsel, David J. Levy, a partner at Howie, Sacks & Henry LLP, recognized as one of the top personal injury law firms in Canada. David has been working on behalf of accident victims since 1999 and has tried many cases both in our Courts and the Financial Services Commission of Ontario. At Cervini Bhatia Professional Corporation our legal team actively and relentlessly pursues all cases to achieve maximum results. Put our expertise to work for you!'
+      }
+    }
+  ]
+html
+  head
+    <meta charset="UTF-8">
+    <title>Welcome - Cervini Bhatia PC</title>   
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+  body   
+    include ./includes/layout/_navigation.pug
+    include ./includes/global/_menu.pug
+    .main
+        .page-holder
+            +header('about')
+            +hero('','','about')
+            +text-block('team','What we offer', 'Our Team has a combined experience of over 20 years in Personal Injury Claims. Our knowledge and expertise in this field are diverse and our members have working experience in both Insurance Defence and Plaintiff Actions. More importantly, our trial team is prepared to aggressively pursue your claim in front of a Jury. Our main trial lawyer, Mr. David Levy of Howie, Sacks & Henry has extensive trial litigation experience and has recovered millions of dollars for clients. We will work hard on your behalf to ensure that you receive appropriate compensation', 'yes' ,'view team')
+            +gridContent('We offer you more than just experience',myGridItems, 'x-factor')
+            +gridContent('firm overview',firmOverviewGrid, 'firmoverview')
+            include ./includes/global/_quote.pug
+            include ./includes/layout/_footer.pug
+            
+
+    

@@ -1,0 +1,61 @@
+.team-single{
+  background-color: $color-offset--black-1;
+  padding-top: 50rem;
+  padding-bottom: 0;
+
+  .team-member-box{
+    @include element('img'){
+      height: 100%;
+      width: 50%;
+      position: absolute;
+      top: 0%;
+      left: 50%;
+      transform:translateX(-50%);
+      z-index: 1;
+      // @include bg-image('../images/cervini-web-min.png');
+
+      @include modifier('shiwali'){
+        // @include bg-image('../images/bhatia-web-min.png');
+      }
+    }
+
+    @include element('content'){
+      position: relative;
+      z-index: 2;
+      width: 70%;
+      margin: 0 auto;
+
+      .team-member-name, .team-member-job-title{
+        text-transform: capitalize;
+      }
+
+      .team-member-name{
+         @include text(4rem, .2rem, .1rem);
+        // font-family: $font-family--playfair;
+       }
+      .team-member-job-title{
+        @include text(1.6rem, .2rem, .2rem);
+        margin-bottom: 6rem;
+      }
+      .team-member-description{
+        @include text(1.8rem, .2rem, .1rem);
+        margin-bottom: 5rem;
+
+        &:last-of-type{
+          margin-bottom: 12rem;
+        }
+      }
+    }
+
+    .team-member-contact-box{
+      p{
+        @include text(1.4rem, .2rem, .1rem);
+        text-transform: uppercase;
+        font-style: italic;
+        // font-family: $font-family--playfair;
+      }
+
+    }
+  }
+
+}

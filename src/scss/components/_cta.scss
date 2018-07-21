@@ -1,0 +1,88 @@
+
+
+.cta{
+
+  @include text(0.7rem, 0rem, .12rem);
+
+  @media screen and (orientation:landscape) and (max-width: 815px) {
+    font-size: 0.9rem;
+  }
+  
+  color: $color-offset--green;
+  text-transform: uppercase;
+  position: relative;
+  padding: 10px 11px 10px 77px;
+  cursor: pointer;
+  z-index: 3;
+  transition: all .2s ease-out;
+  border: 1px solid  #64666c;
+  overflow: hidden;
+
+  //button size adjustment for only 600px-768px
+  @media screen and (min-width: 600px) and (max-width: 768px){
+    // padding: .6rem .8rem .6rem 4rem;
+  }
+
+  //phone landscape font-size
+  @media screen and (orientation:landscape) and (max-width: 815px) {
+    font-size: 0.55rem;
+ }
+
+  div{
+    display: block;
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #64666c;
+    width: 35px;
+    height: 1px;
+    z-index: 1;
+
+    @include for-tablet-portrait-up{
+      left: 13px;
+    }
+
+    &:after {
+      position: absolute;
+      top: 0;
+      left: 0%;
+      z-index: 2;
+      content: '';
+      background-color:  $color-offset--white;
+      height: 100%;
+      width: 0%;
+      transition: all .15s ease-in;
+    }
+
+  }
+
+  &:hover div:after{
+    width:100%;
+  }
+
+  @include modifier('not-btn'){
+    border: none;
+    padding: 0px 0px 0px 0px;
+    transition: none;
+  }
+
+  
+
+    // &:hover {
+    //   color: $color-offset--black;
+    // }
+
+
+    // @include modifier('brown'){
+    //   color: $color-offset--brown;
+    // }
+
+    // @include modifier('reverse'){
+    //   &:after{
+    //     top: 0rem;
+    //   }
+    // }
+
+
+}

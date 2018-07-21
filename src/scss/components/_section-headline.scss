@@ -1,0 +1,32 @@
+.headline {
+    position: relative;
+    display: inline-block;
+    @include element('top-line') {
+        position: absolute;
+        top: -.5rem;
+        left: 0;
+        background-color: $color-offset--green;
+        width: 50px;
+        height: 1px;
+    }
+    @include element('tagline') {
+        font-size: 0.875rem;
+        letter-spacing: 0.55rem;
+        text-transform: uppercase;
+        margin-bottom: .7rem;
+        font-family: $type-font--cormorant-garamond;
+    }
+    @include element('title') {
+        font-family: $type-font--cormorant-garamond;
+        font-size: 2.175rem;
+        margin-bottom: 5.625rem;
+        line-height: 1;
+        @media screen and (min-width: 1000px) {
+            font-size: 2.5rem;
+        }
+    }
+    @include element('description') {
+        font-family: $type-font--cormorant-garamond;
+        font-size: 1.25rem;
+    }
+}

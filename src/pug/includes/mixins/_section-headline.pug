@@ -1,0 +1,11 @@
+mixin section-headline(modifier,tagline, title, description, idSection)
+    section.section(id=idSection, class="section--"+modifier)
+        .container  
+                .row.row--tablet-center
+                    .col-xs-12.col-sm-10.col-md-10.col-lg-6
+                        .headline
+                            div.headline__top-line
+                            p.headline__tagline=tagline
+                            h1.headline__title !{title}
+                            p.headline__description=description
+        block                    

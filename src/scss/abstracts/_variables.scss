@@ -1,0 +1,40 @@
+@import 'mixins';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
+// @import url('https://fonts.googleapis.com/css?family=Raleway:100,300');
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,400i');
+//@import 'butler-fonts';
+//@font-face{
+//  font-family: 'Butler Light';
+//  src: url('../fonts/butler-light.otf');
+//}
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
+/* FONT */
+// $font-family--playfair: 'Playfair Display', serif;
+$type-font--cormorant-garamond: 'Cormorant Garamond', serif;
+$type-font--raleway: 'Raleway', sans-serif;
+
+/* GRID */
+$grid-width: 114rem;
+
+/* COLORS */
+$color-offset--black-1: #000;
+$color-offset--black-2: #222629;
+$color-offset--black-3: #2D2D2D;
+
+$color-offset--white: #fff;
+
+$color-offset--light-grey: #CFCFCF;
+$color-offset--dark-grey: #959595;
+$color-offset--bg: #1e2329;
+
+// $color-offset--green: #86C232;
+$color-offset--green: #94C11F;
+
+
+
+
+
+
+
+

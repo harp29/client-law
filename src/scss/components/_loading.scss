@@ -1,0 +1,42 @@
+// @import "../abstracts/mixins";
+
+.load {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 8;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-color: $color-offset--white;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    @include element('logo') {
+        width: 80%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        @include for-tablet-portrait-up{ 
+            width: 45%; 
+        }
+        #svg-logo{
+            width: 100%;
+            .symbol, .letters-top, .letters-bottom{
+                fill: none;
+                opacity: 0;
+            }
+            .symbol{
+                stroke: #94C13D;
+            }
+            .letters-top{
+                stroke: #585757;
+            }
+            .letters-bottom{
+                stroke: #9C9C9B;
+                stroke-width: 0.5;
+            }
+        }
+    }
+}
+

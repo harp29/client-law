@@ -1,0 +1,83 @@
+.page-base {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    top: 0;
+    @include element('image') {
+        opacity: 0;
+        // transform: scale(1.3);
+        // filter: saturate(0) contrast(1.7);
+        @include modifier('index'){
+            @include bg-image('../images/landing.jpeg');
+        }
+        @include modifier('about'){
+            @include bg-image('../images/landing.jpeg');
+        }
+        @include modifier('news'){
+            @include bg-image('../images/news.jpg');
+        }
+        @include modifier('team'){
+            @include bg-image('../images/team.jpg');
+            // filter: saturate(0) contrast(1);
+        }
+    }
+    &__image--news {
+        //@include bg-image('../images/news-media.jpg');
+        opacity: .1;
+        filter: saturate(0) contrast(1.7);
+    }
+    @include element('grid') {
+        @media screen and (min-width: 600px){
+            width: 100%;
+            position: fixed;
+            z-index: -1;
+            opacity: 1;
+            will-change: opacity;
+            box-sizing: border-box;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            // min-height: 100%;
+            height: 100%;
+            .inner {
+                min-height: 100%;
+                height: 100%;
+                border-left: 1px solid #CECECE;
+                border-right: 1px solid #CECECE;
+                opacity: 0.09;
+                margin: 0 auto;
+                width: calc(100% - 160px);
+                max-width: 1400px;
+
+                @include for-tablet-portrait-up{
+                    width: calc(100% - 255px);
+                }
+            }
+            .middle {
+                width: 0px;
+                background: #CECECE;
+                position: fixed;
+                top: 0;
+                left: 50%;
+                // min-height: 100%;
+                height: 100%;
+                opacity: 0.09;
+            }
+            &:nth-of-type(3) {
+                // right: 0;
+            } // &:nth-of-type(4) {
+            //     left: 50.001vw;
+            // }
+            // &:nth-of-type(5) {
+            //     left: 66.668vw;
+            // }
+            // &:nth-of-type(6) {
+            //     left: 83.335vw;
+            // }
+            // &:nth-of-type(7) {
+            //     left: 100.002vw;
+            // }
+        }
+    }
+}

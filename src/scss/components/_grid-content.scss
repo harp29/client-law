@@ -1,0 +1,108 @@
+.grid-content{
+    position: relative;
+    overflow: hidden;
+    @include element('title'){
+        text-align: center;
+        margin-bottom: 4rem;
+        text-transform: capitalize;
+
+        span{
+            display: block;
+        }
+    }
+
+    @include element('list'){
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    @include element('item'){
+        position: relative;
+        padding: 2.5rem 0;
+        text-align: center;
+
+        &:not(:first-of-type):not(:last-of-type) {
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        &:last-of-type{
+            padding: 2.5rem 0 0 0;
+        }
+
+        .item-title{
+            font-size: 1.3rem;
+            margin-bottom: 1.3rem;
+        }
+
+        .item-content{
+            .item-description-title{
+                font-size: 1.35rem;
+                margin-bottom: 1.4rem;
+
+                @include for-tablet-landscape-up{
+                    font-size: 1.7rem;
+                }
+            }
+            .item-description{
+                text-align: center;
+                color: $color-offset--dark-grey;
+            }
+        }
+
+        //RESPONSIVE: MIN-WIDTH 900PX
+        //.GRID-CONTENT__ITEM:
+        @include for-tablet-landscape-up{
+            padding: 4rem 0;
+            text-align: unset;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            .item-title{
+                font-size: 1.875rem;
+            }
+
+            .item-content{
+                width: 60%;
+                .item-description{
+                    text-align: unset;
+                }
+            }
+        }
+
+        //RESPONSIVE: MIN-WIDTH 1200PX
+        //.GRID-CONTENT__ITEM:
+        @include for-desktop-up{
+            .item-content{
+                width: 50%;
+            }
+        }
+    }
+
+    //MODIFIER: FIRM OVERVIEW
+    @include modifier('firmoverview'){
+        .item-content{
+            width: 100%;
+            max-width: 540px;
+        }
+        .grid-content__item{
+            @media screen and (min-width: 600px){
+                align-items: unset;
+            }
+
+            .item-title {
+                // display: inline-block;
+                // width: 30%;
+            }
+
+            .item-content{
+                .item-description{
+                    text-align: justify;
+                }
+            }
+        }
+        
+    }
+}

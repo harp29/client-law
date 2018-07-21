@@ -1,0 +1,17 @@
+.text-block{
+    text-align: center;
+
+    @include element('title'){
+        color: $color-offset--light-grey;
+        margin-bottom: 2.5rem;
+        line-height: 1.2;
+    }
+
+    @include element('description'){
+        margin-bottom: 3.75rem;
+    }
+
+    @include element('cta'){
+        display: inline-block;
+    }
+}

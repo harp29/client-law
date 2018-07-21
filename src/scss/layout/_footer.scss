@@ -1,0 +1,104 @@
+//FOOTER HAS TWO PORTIONS: TOP-FOOTER AND BOTTOM-FOOTER
+.footer {
+  width: 100%;
+  position: relative;
+  padding: 6rem 0 0 0;
+  @include for-tablet-landscape-up {
+    background-color: $color-offset--white;
+    padding: 3rem 0 0 0;
+    margin-top: 100px;
+  } //SHARED STYLES IN .TOP-FOOTER, .BOTTOM-FOOTER
+  .top-footer,
+  .bottom-footer {
+    .item-title,
+    .item-anchor {
+      font-size: 0.95rem;
+    }
+    .item-title {
+      text-transform: capitalize;
+      margin-bottom: 1rem;
+      font-family: $type-font--cormorant-garamond;
+      color: $color-offset--light-grey;
+      position: relative;
+      @include for-tablet-landscape-up {
+        text-align: center;
+        &:before {
+          content: '';
+          position: absolute;
+          top: 32px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 80%;
+          background-color: darken($color-offset--light-grey, 3%);
+          height: 1px;
+        }
+      }
+    }
+  } //END OF SHARED STYLES
+  //.TOP-FOOTER
+  .top-footer {
+    //.TOP-FOOTER__LIST:
+    @include element('list') {
+      margin-bottom: 2.5rem;
+      &:last-of-type {
+        .link-anchor {
+          margin: 0;
+        }
+      }
+    } //.TOP-LIST__ITEM
+    @include element('item') {
+      .item-anchor {
+        margin-bottom: .8rem;
+        display: block;
+        span {
+          display: block;
+        }
+      }
+    } //RESPONSIVE: MIN-WIDTH 900PX
+    @include for-tablet-landscape-up {
+      // .TOP-FOOTER RESPONSIVE VALUES MIN-WIDTH 900PX
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 32px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        background-color: lighten($color-offset--light-grey, 12%);
+        height: 1px;
+      }
+      .item-title {
+        color: $color-offset--dark-grey;
+      }
+      .item-anchor {
+        color: $color-offset--black-1;
+      }
+    } //END OF .TOP-FOOTER RESPONSIVE: MIN-WIDTH 900PX
+  } // END OF .TOP-FOOTER
+  //.BOTTOM-FOOTER
+  .bottom-footer {
+    width: 100%;
+    padding: 1.2rem 0;
+    background-color: #2F353D;
+    //.BOTTOM-FOOTER__LIST
+    @include element('list') {
+      display: flex;
+      justify-content: space-between; // align-items: center;
+    }
+    //END OF .BOTTOM-FOOTER__LIST
+    //.BOTTOM-FOOTER__ITEM
+    @include element('item') {
+      .item-anchor {
+        color: $color-offset--white;
+        text-transform: capitalize;
+        font-weight: 500;
+        letter-spacing: 1px;
+      }
+    }
+    //END OF .BOTTOM-FOOTER__ITEM
+  }
+}

@@ -1,0 +1,123 @@
+
+.u-flex{
+  display: flex;
+}
+
+.u-display-block{
+  display: block;
+}
+
+.u-align{
+  @include modifier('center')
+  align-items: center;
+} 
+
+.u-align--center{
+  align-items: center;
+}
+
+.u-margin-center{
+  margin: 0 auto;
+}
+
+.u-justify{
+  @include modifier('start'){
+    justify-content: start;
+  }
+  @include modifier('center'){
+    justify-content: center;
+  }
+  @include modifier('space-between'){
+    justify-content: space-between;
+  }
+  @include modifier('tablet-center'){
+    @media screen and (min-width: 768px) and (max-width: 768px){
+      justify-content: center;      
+    }
+  }
+}
+
+.u-flex-direction{
+  @include modifier('row'){
+    flex-direction: row;
+  }
+}
+
+.u-center-inner{
+  align-items: center;
+  justify-content: center;
+}
+
+.u-full-height{
+  height: 100vh;
+}
+
+.u-center-text { text-align: center !important; }
+
+.u-translateX-negative { transform: translateX(-2rem); }
+
+////////////////////////////////////
+//
+//* MARGIN STYLES *
+//
+///////////////////////////////////
+
+.u-margin-bottom--small { margin-bottom: 2.75rem; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 3rem !important;
+
+
+  @include for-big-desktop-up {
+    margin-bottom: 5rem !important;
+  }
+}
+
+.u-margin-bottom-big {
+  margin-bottom: 6rem !important;
+
+  @include for-tablet-portrait-up {
+    margin-bottom: 5rem !important;
+  }
+
+  @include for-big-desktop-up {
+    margin-bottom: 9rem !important;
+  }
+}
+
+.u-margin-bottom-massive {
+  margin-bottom: 11rem !important;
+
+  @include for-tablet-portrait-up {
+    margin-bottom: 7rem !important;
+  }
+
+  @include for-big-desktop-up {
+    margin-bottom: 14rem !important;
+  }
+}
+
+.u-align-self-flex-end{
+  align-self: flex-end;
+}
+
+.u-display-none{
+  @include for-phone-only{
+    display: none;
+  }
+}
+
+.u-display-block{
+  @media only screen and (min-width: 37.5em) {
+    display: block;
+  };
+}
+
+.u-display-none-landscape-xs{
+  @media only screen and (orientation: landscape) and (max-width: 815px) {
+    display: none !important;
+  };
+  @media screen and(orientation: landscape) and (max-width: 815px){
+    font-size: 1.2rem;
+  }
+}

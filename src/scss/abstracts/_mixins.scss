@@ -1,0 +1,80 @@
+@mixin no-margin-bottom-last-of-type{
+  &:last-of-type{
+    margin: 0;
+  }
+}
+
+/* Animation keyframes */
+@mixin keyframes( $animationName )
+{
+    @-webkit-keyframes $animationName {
+        @content;
+    }
+    @-moz-keyframes $animationName {
+        @content;
+    }
+    @-o-keyframes $animationName {
+        @content;
+    }
+    @keyframes $animationName {
+        @content;
+    }
+}
+
+/* Text Mixin */
+@mixin text($font-size, $word-spacing,
+$letter-spacing){
+  font-size: $font-size;
+  word-spacing: $word-spacing;
+  letter-spacing: $letter-spacing;
+}
+
+/* BG Mixin */
+@mixin bg-image($background-image){
+  background: url($background-image);
+  background-repeat: no-repeat;
+  background-size: cover;
+  //background-attachment: fixed;
+  background-position: center center;
+  height: 100%;
+  width: 100%;
+}
+
+@mixin bg-image-setup{
+  background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+@mixin element($element){
+  &__#{$element}{
+    @content;
+  }
+}
+
+@mixin modifier($modifier){
+  &--#{$modifier}{
+    @content;
+  }
+}
+
+/* Responsive Mixins */
+// MEDIA QUERY MANAGER
+@mixin for-phone-only {
+  @media screen and (max-width: 599px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media screen and (min-width: 600px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media screen and (min-width: 900px) { @content; }
+}
+@mixin for-desktop-up {
+  @media screen and (min-width: 1200px) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media screen and (min-width: 1800px) { @content; }
+}
+
+
+

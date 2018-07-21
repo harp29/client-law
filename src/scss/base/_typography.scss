@@ -1,0 +1,167 @@
+@import '../abstracts/_variables';
+//@import '../abstracts/butler-fonts';
+
+/* TYPOGRAPHY STYLES */
+
+////////////////////////////////////
+//
+//* HEADING STYLES *
+//
+///////////////////////////////////
+
+h1, h2, h3{
+  line-height: 1.2;
+  font-weight: 300;
+}
+
+h1{
+  font-size: 1.7rem;
+  font-family: $type-font--cormorant-garamond;
+
+  @include for-desktop-up{
+    font-size: 2.5rem;
+  }
+}
+
+.large-title{
+  font-size: 3rem;
+  display: block;
+}
+
+p{
+  font-size: .9375rem;
+  text-align: justify;
+  line-height: 2;
+
+  @include for-desktop-up{
+    font-size: 1.125rem;
+  }
+}
+
+
+// .type--heading{
+//   font-size: 1.3rem;
+//   font-weight: 100;
+//   font-family: $font-family--cormorant-garamond;
+
+//   // MODIFIERS
+//   @include modifier('large') {
+//     font-size: 1.75rem;
+//     letter-spacing: .04rem;
+//     line-height: 1.035;
+
+//     @include for-tablet-portrait-up{
+//       font-size: 2.8rem;
+//     }
+//   }
+// }
+
+
+////////////////////////////////////
+//
+//* PARAGRAPH STYLES *
+//
+///////////////////////////////////
+
+.type--paragraph{
+  // @include text(0.75rem, 300, 200%, none, 0px, 0px, inherit);
+  line-height: 1.66;
+  font-size: 0.95rem;
+  // letter-spacing: .075em;
+
+  @include for-tablet-portrait-up{
+    font-size: 1rem;
+  }
+
+  // MODIFIERS
+  @include modifier('small'){
+   font-size: 1.125rem;
+   font-weight: 400;
+  }
+
+}
+
+
+////////////////////////////////////
+//
+//* AHREF/LINK STYLES *
+//
+///////////////////////////////////
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+
+////////////////////////////////////
+//
+//* FONT MODIFIER STYLES *
+//
+///////////////////////////////////
+
+.type--uppercase{
+  text-transform: uppercase;
+}
+
+.type--captialize{
+  text-transform: capitalize;
+}
+
+//FONT COLOR MODIFIERS:
+.type-color--black-1{
+  color: $color-offset--black-1;
+}
+
+.type-color--black-2{
+  color: $color-offset--black-2;
+}
+
+.type-color--white{
+  color: $color-offset--white;
+}
+
+.type--color-light-grey{
+  color: $color-offset--light-grey;
+}
+
+.type-color--dark-grey{
+  color: $color-offset--dark-grey;
+}
+
+.type--color-green{
+  color: $color-offset--green !important;
+}
+
+
+
+
+// SPECIFIC LETTER/WORD/SENTENCE STYLES
+.letter-spacing-big{
+  letter-spacing: .7rem;
+}
+
+.uppercase{
+  text-transform: uppercase;
+}
+
+.center{
+  text-align: center;
+}
+
+.capitalize{
+  text-transform: capitalize;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

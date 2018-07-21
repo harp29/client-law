@@ -1,0 +1,7 @@
+mixin quote(pageName, quote, author)
+    section(id=pageName, class=pageName)
+            .container  
+                    .quote
+                        h1.quote__heading= quote
+                        p.quote__author= author
+    block                                          

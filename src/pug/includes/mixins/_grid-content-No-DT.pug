@@ -1,0 +1,44 @@
+// My Grid items
+
+
+// My Mixin
+
+mixin gridContentNoDT(items)
+
+  .grid-content
+    .container
+      .row
+        ul.grid-content__list.grid-content__list--not-news
+
+          each item in items
+
+            li.grid-content__item
+              h1.item-title= item.title
+              .item-content
+                p.item-description= item.description.contents
+
+
+
+
+ -
+      var myGridItems = [
+        {
+          title: 'Efficiency',
+          description: {
+            contents: 'Our extensive resources allow us to dedicate more time to your file. Efficiency matters.'
+          }
+        },
+        {
+          title: 'Human Experience',
+          description: {
+            contents: 'To us, you are not just a file number. We offer the personal service that many can’t.'
+          }
+        },
+        {
+          title: 'Results',
+          description: {
+            contents: 'We have been awarded Millions of dollars in compensation for our clients.'
+          }
+        }
+      ]
+    //- +gridContentNoDT(myGridItems)

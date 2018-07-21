@@ -1,0 +1,89 @@
+@import "../abstracts/mixins";
+/*
+  NAVIGATION STYLES
+*/
+
+.nav.column {
+  align-items: center;
+}
+
+.nav {
+  position: fixed;
+  z-index: 7;
+  width: 100%;
+  @include element('logo') {
+    cursor: pointer;
+    position: fixed;
+    top: 1.875rem;
+    left: calc(60px - 50px);
+    
+    @media screen and (orientation: landscape) and (min-width: 600px){
+      left: calc(60px - 30px);    
+    }
+    @include for-tablet-portrait-up{
+      left: calc(60px - 20px);    
+    }
+    
+    @include for-big-desktop-up{
+      left: calc(120px - 20px);  
+    }
+  }
+  @include element('hamburger') {
+    border: none;
+    background: none;
+    cursor: pointer;
+    position: fixed;
+    z-index: 7;
+    width: 44px;
+    height: 50px;
+    top: 26px;
+    left: calc(50% - 22px);
+    @media screen and (min-width: 1000px) {
+      left: calc(65px - 22px);
+      top: calc(50% - 22px);
+    }
+    @include for-big-desktop-up{
+      left: calc(115px - 22px);  
+    }
+    .burger {
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 30px;
+      height: 2px;
+      background: #a0a0a4;
+    }
+    .burger1 {
+      top: 11px;
+    }
+    .burger2 {
+      top: 21px;
+    }
+    .burger3 {
+      top: 31px;
+    }
+    .burger4,
+    .burger5 {
+      opacity: 0;
+      transition: all 0.2s;
+    }
+    .burger4 {
+      transform: rotate(45deg) scaleX(0.3);
+    }
+    .burger5 {
+      transform: rotate(-45deg) scaleX(0.3);
+    }
+  }
+  
+  @include element('title'){
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: $color-offset--light-grey;
+    font-size: 0.6rem;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+  }
+}

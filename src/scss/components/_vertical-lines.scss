@@ -1,0 +1,13 @@
+.vertical-lines-box{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.vertical-lines{
+  height: 100%;
+  width: 25%;
+  background-color: $color-offset--white;
+  border-right: 1px solid red;
+}

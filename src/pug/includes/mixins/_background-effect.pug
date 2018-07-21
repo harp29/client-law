@@ -1,0 +1,6 @@
+mixin background-effect(letter,property)
+    .background-effect
+        if(letter === true)
+            h1(class="letter letter--"+property)= property
+        else
+            div !{property}
